@@ -1,0 +1,129 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.field {
+    margin-bottom: 20px;
+    position: relative;
+
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      margin-left: 5px;
+      padding-left: 15px;
+      color: #eee;
+      position: relative;
+      transition: .3s ease-out;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: #eee;
+        transition: .3s ease-out;
+      }
+    }
+
+    input {
+        width: 100%;
+        background: none;
+        outline: none;
+        border: 1px solid transparent;
+        background: rgba(238, 238, 238, 1);
+        border-radius: 8px;
+        padding: 8px;
+        color: darken(#4f637b, 10%);
+        transition: .3s ease-out;
+
+        &:focus {
+          border: 1px solid #fcd670;
+          background: rgba(238, 238, 238, .8);
+
+          ~ label {
+            color: #fcd670;
+
+            &:before {
+              background: #fcd670;
+            }
+          }
+        }
+    }
+
+    .input-error {
+        background: lighten(#c0392b, 30%) !important;
+    }
+
+    .error {
+      position: absolute;
+      z-index: 2;
+      bottom: -35px;
+      right: 10px;
+      color: #eee;
+      padding: 5px;
+      background: #c0392b;
+      font-size: 14px;
+      animation: errorUp .5s ease-out forwards;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: -5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #c0392b;
+      }
+    }
+}
+
+.input-radio {
+  order: 2;
+  display: flex;
+  input, .input-radio__title {
+    order: unset !important;
+  }
+
+  input {
+    margin-right: 5px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.input-checkbox {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+
+  &__option {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__title {
+    width: 30%;
+  }
+
+  input {
+    width: unset;
+
+    &:checked {
+      ~ div {
+        color: #fcd670;
+      }
+    }
+  }
+}
+
+@keyframes errorUp {
+  from { opacity: 0; transform: translateY(20px) }
+  to { opacity: 1; transform: translateY(0) }
+}

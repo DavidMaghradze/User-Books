@@ -1,0 +1,26 @@
+.navigation {
+    ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        a {
+            color: #333;
+            text-transform: uppercase;
+            transition: .3s ease-out;
+
+            &:hover {
+                color: #e67e22;
+            }
+        }
+
+        a.active {
+            color: #e67e22;
+        }
+    }
+}

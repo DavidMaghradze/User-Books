@@ -1,0 +1,91 @@
+.users {
+    &__container {
+        background: #67809f;
+    }
+}
+
+.user-list {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.user-card {
+    color: #fff;
+    background: #5e7694;
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.3);
+    padding: 20px;
+
+    &__header {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    &__book-name {
+        font-size: 30px;
+        color: #e67e22;
+        margin-bottom: 10px;
+    }
+
+    &__book-info {
+        font-size: 14px;
+        
+        span {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            strong {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__user {
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__user-info {
+        div {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        .genres {
+
+            strong {
+                display: block;
+                margin-bottom: 6px;
+            }
+        }
+        
+        .genre {
+
+            display: inline-block;
+            background: #e67e22;
+            border-radius: 5px;
+            padding: 8px;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    footer {
+        margin-top: 20px;
+        text-align: right;
+    }
+}
+
+@media(max-width: 767px) {
+    .user-list {
+        grid-template-columns: 1fr;
+    }
+}
