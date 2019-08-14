@@ -1,7 +1,7 @@
 import React from 'react';
-import TextInput from './TextInput';
-import RadioInput from './RadioInput';
-import SelectDropdown from './Select';
+import TextInput from './FormFields/TextInput';
+import RadioInput from './FormFields/RadioInput';
+import SelectDropdown from './FormFields/Select';
 
 const WizardOne = ({firstName, lastName, age, email, country, gender, onChange, onNext}) => {
 

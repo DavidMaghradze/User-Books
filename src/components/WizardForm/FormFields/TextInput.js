@@ -12,6 +12,7 @@ const TextInput = ({value, label, touched, isValid, error, config, onChange, ema
             />
             <label>
                 {label} <strong style={{marginLeft:"10px", color: "#db2828"}}>{emailPS}</strong>
+                { config.name==="price" && '(in Lari)' }
             </label>
             { !isValid && touched && <p className="error">{error}</p> }
         </div>

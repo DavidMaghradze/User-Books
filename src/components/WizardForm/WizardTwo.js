@@ -1,6 +1,6 @@
 import React from 'react';
-import TextInput from './TextInput';
-import CheckboxInput from './CheckboxInput';
+import TextInput from './FormFields/TextInput';
+import CheckboxInput from './FormFields/CheckboxInput';
 
 const WizardTwo = ({name, price, parts, genres, onChange, onPrev, onSubmit}) => {
 

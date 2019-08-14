@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import UserList from './UserList';
+import UserCard from './UserCard';
 
 const Users = (props) => {
 
@@ -16,7 +16,7 @@ const Users = (props) => {
                 </header>
                 <div className="user-list">
                     { users.length!==0 ? users.map((user, id)=> 
-                        <UserList key={id} user={user}/>    
+                        <UserCard key={id} user={user}/>    
                     ) : <h2 style={{color: '#fff'}}>Sorry, there are No Users yet...</h2> 
                     }
                 </div>

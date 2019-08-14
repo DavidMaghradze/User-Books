@@ -5,10 +5,10 @@ import _ from 'lodash';
 import validate from '../../helpers/validator/index';
 import { editUser } from '../../store/actions';
 
-import TextInput from '../WizardForm/TextInput';
-import SelectDropdown from '../WizardForm/Select';
-import RadioInput from '../WizardForm/RadioInput';
-import CheckboxInput from '../WizardForm/CheckboxInput';
+import TextInput from '../WizardForm/FormFields/TextInput';
+import SelectDropdown from '../WizardForm/FormFields/Select';
+import RadioInput from '../WizardForm/FormFields/RadioInput';
+import CheckboxInput from '../WizardForm/FormFields/CheckboxInput';
 
 class UserEdit extends React.Component {
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { removeUser } from '../../store/actions';
 
-const UserList = (props) => {
+const UserCard = (props) => {
 
     const removeUser = (e) => {
         e.preventDefault();
@@ -62,4 +62,4 @@ const UserList = (props) => {
     )
 };
 
-export default connect(null,{removeUser})(UserList);
+export default connect(null,{removeUser})(UserCard);

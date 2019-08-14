@@ -1,12 +1,17 @@
+import {
+    ADD_USER,
+    EDIT_USER,
+    REMOVE_USER
+} from '../types';
 import _ from 'lodash';
 
 export default (state = {}, action) => {
     switch(action.type) {
-        case 'ADD_USER': 
+        case ADD_USER: 
             return { [action.payload.email]: action.payload, ...state}
-        case 'EDIT_USER':
+        case EDIT_USER:
             return {...state, [action.payload.email]: action.payload}
-        case 'REMOVE_USER':
+        case REMOVE_USER:
             const updatedState = _.omit(state, [action.payload]);
             return updatedState
         default :
