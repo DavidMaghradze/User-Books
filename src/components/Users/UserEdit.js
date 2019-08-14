@@ -91,9 +91,9 @@ class UserEdit extends React.Component {
                     type: "select"
                 },
                 options: [
-                    {value: 'georgia', label: 'Georgia'},
-                    {value: 'russia', label: 'Russia'},
-                    {value: 'england', label: 'England'}
+                    {value: 'Georgia', label: 'Georgia'},
+                    {value: 'Russia', label: 'Russia'},
+                    {value: 'England', label: 'England'}
                 ]
             },
 
